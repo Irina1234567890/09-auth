@@ -8,7 +8,7 @@
 import axios from "axios";
 
 const host = process.env.NEXT_PUBLIC_API_URL || "";
-const baseURL = `${host}/api`;
+const baseURL = host.endsWith("/") ? `${host}api` : `${host}/api`;
 
 export const instance = axios.create({
   baseURL,
