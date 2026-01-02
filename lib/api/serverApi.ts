@@ -32,3 +32,15 @@ export const fetchNoteById = async (id: string): Promise<Note> => {
   });
   return res.data;
 };
+//
+//
+//
+export const getMeServer = async () => {
+  const cookieStore = await cookies();
+  const res = await instance.get("/users/me", {
+    headers: {
+      Cookie: cookieStore.toString(),
+    },
+  });
+  return res.data;
+};
