@@ -7,7 +7,6 @@
 // });
 import axios from "axios";
 
-// Використовуємо порожній рядок, якщо змінна не визначена, щоб уникнути "undefined/api"
 const host = process.env.NEXT_PUBLIC_API_URL || "";
 const baseURL = `${host}/api`;
 
