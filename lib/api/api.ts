@@ -53,7 +53,7 @@
 import axios from "axios";
 
 // Переконайся, що тут немає помилки в назві змінної
-const host = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+const host = process.env.NEXT_PUBLIC_API_URL || "";
 const baseURL = `${host}/api`;
 
 export const instance = axios.create({
